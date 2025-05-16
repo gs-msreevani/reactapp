@@ -1,0 +1,56 @@
+/* Center the login form */
+.login-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the form */
+  align-items: center; /* Vertically center the form */
+  height: 100vh; /* Take up the full height of the viewport */
+  background-color: #f4f4f4; /* Optional: Add a background color */
+}
+
+form {
+  background-color: #fff; /* Background color for the form */
+  padding: 30px; /* Add some space inside the form */
+  border-radius: 8px; /* Rounded corners for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow around the form */
+  width: 100%;
+  max-width: 400px; /* Limit the width of the form */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  display: block;
+}
+
+input {
+  width: 100%; /* Make inputs take full width */
+  padding: 10px;
+  margin-bottom: 15px; /* Add space between fields */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded corners for input fields */
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
