@@ -34,6 +34,19 @@ function LoginForm({ onLogin }) {
         }
       );
     }
+    if (window.pendo) {
+      window.pendo.initialize({
+        visitor: {
+          id: email,
+          email: email, // Recommended if using Pendo Feedback, or NPS Email
+          full_name: username, // Recommended if using Pendo Feedback
+        },
+        account: {
+          id: account,
+          name: account, // Optional
+        },
+      });
+    }
 
     onLogin(); // Set isLoggedIn = true in App.js
     navigate("/home"); // Redirect to /home
