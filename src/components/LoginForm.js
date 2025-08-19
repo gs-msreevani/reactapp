@@ -27,6 +27,7 @@ function LoginForm({ onLogin }) {
           id: email,
           email: email,
           firstName: username,
+          first_login_date: new Date().toISOString(),
         },
         {
           id: account,
