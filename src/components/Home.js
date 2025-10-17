@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import TaskForm from "./TaskForm";
 import TaskColumn from "./TaskColumn";
-import todoIcon from "../src/assets/direct-hit.png";
-import doingIcon from "../src/assets/glowing-star.png";
-import doneIcon from "../src/assets/check-mark-button.png";
+import todoIcon from "../assets/direct-hit.png";
+import doingIcon from "../assets/glowing-star.png";
+import doneIcon from "../assets/check-mark-button.png";
 
 const Home = () => {
   useEffect(() => {
