@@ -4,7 +4,7 @@ const About = () => {
   useEffect(() => {
     document.title = "About Page"; // Set the page title
   }, []);
-  return <div>I am about page</div>;
+  return <div id="about">I am about page</div>;
 };
 
 export default About;
