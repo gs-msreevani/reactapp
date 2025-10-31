@@ -7,7 +7,7 @@ const Contact = () => {
     const currentPageType = fullUrl.includes("contact") ? "contact" : "other";
     console.log(currentPageType);
     if (typeof window.aptrinsic === "function") {
-      window.aptrinsic("set", "usersree", { pageType: currentPageType });
+      window.aptrinsic("set", "user", { pageType: currentPageType });
       console.log(
         "Aptrinsic user attribute set with pageType:",
         currentPageType
