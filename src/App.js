@@ -12,6 +12,8 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Logout from "./components/Logout";
+import Product1 from "./components/Product1";
+import Product2 from "./components/Product2";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -43,8 +45,16 @@ function App() {
           />
           <Route
             path="/about"
-            element={isLoggedIn ? <About /> : <Navigate to="/login" />}
-          />
+            element={isLoggedIn ? <About /> : <Navigate to="/login" />}>
+            <Route
+              path="product1"
+              element={isLoggedIn ? <Product1 /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="product2"
+              element={isLoggedIn ? <Product2 /> : <Navigate to="/login" />}
+            />
+          </Route>
           <Route
             path="/contact"
             element={isLoggedIn ? <Contact /> : <Navigate to="/login" />}
