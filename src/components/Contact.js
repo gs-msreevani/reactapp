@@ -8,14 +8,10 @@ const Contact = () => {
 
     const fullUrl = window.location.href;
     const currentPageType = fullUrl.includes("contact") ? "contact" : "other";
-    console.log(currentPageType);
 
     if (typeof window.aptrinsic === "function") {
       window.aptrinsic("set", "user", { pageType: currentPageType });
-      console.log(
-        "Aptrinsic user attribute set with pageType:",
-        currentPageType
-      );
+      console.log("Aptrinsic user attribute set with:", currentPageType);
     }
   }, []);
 
@@ -35,6 +31,7 @@ const Contact = () => {
 
       {/* Help Button */}
       <button
+        id="help-btn"
         onClick={() => setShowPopup(true)}
         style={{
           padding: "8px 14px",
@@ -44,14 +41,15 @@ const Contact = () => {
           border: "none",
           borderRadius: "4px",
         }}>
-        Help
+        Help Popup
       </button>
 
       {/* Popup Modal */}
       {showPopup && (
-        <div>
+        <div id="popup-wrapper">
           {/* Overlay */}
           <div
+            id="popup-overlay"
             style={{
               position: "fixed",
               top: 0,
@@ -65,6 +63,7 @@ const Contact = () => {
 
           {/* Popup Box */}
           <div
+            id="popup-box"
             style={{
               position: "fixed",
               top: "50%",
@@ -80,50 +79,73 @@ const Contact = () => {
             <h3>Help Options</h3>
 
             {/* Radio Buttons */}
-            <div>
+            <div id="radio-group">
               <p>
                 <strong>Select an Option:</strong>
               </p>
-              <label>
-                <input type="radio" name="option" value="option1" /> Option 1
+
+              <label htmlFor="radio-option1">
+                <input
+                  type="radio"
+                  id="radio-option1"
+                  name="help-option"
+                  value="option1"
+                />
+                Option 1
               </label>
               <br />
-              <label>
-                <input type="radio" name="option" value="option2" /> Option 2
+
+              <label htmlFor="radio-option2">
+                <input
+                  type="radio"
+                  id="radio-option2"
+                  name="help-option"
+                  value="option2"
+                />
+                Option 2
               </label>
             </div>
 
             <hr />
 
             {/* Checkboxes */}
-            <div>
+            <div id="checkbox-group">
               <p>
                 <strong>Choose Preferences:</strong>
               </p>
-              <label>
-                <input type="checkbox" value="check1" /> Preference 1
+
+              <label htmlFor="checkbox-pref1">
+                <input type="checkbox" id="checkbox-pref1" value="pref1" />
+                Preference 1
               </label>
               <br />
-              <label>
-                <input type="checkbox" value="check2" /> Preference 2
+
+              <label htmlFor="checkbox-pref2">
+                <input type="checkbox" id="checkbox-pref2" value="pref2" />
+                Preference 2
               </label>
               <br />
-              <label>
-                <input type="checkbox" value="check3" /> Preference 3
+
+              <label htmlFor="checkbox-pref3">
+                <input type="checkbox" id="checkbox-pref3" value="pref3" />
+                Preference 3
               </label>
             </div>
 
             <hr />
 
             {/* Dropdown */}
-            <div>
+            <div id="dropdown-group">
               <p>
                 <strong>Select Category:</strong>
               </p>
-              <select style={{ width: "100%", padding: "6px" }}>
-                <option>Category A</option>
-                <option>Category B</option>
-                <option>Category C</option>
+
+              <select
+                id="dropdown-category"
+                style={{ width: "100%", padding: "6px" }}>
+                <option value="A">Category A</option>
+                <option value="B">Category B</option>
+                <option value="C">Category C</option>
               </select>
             </div>
 
@@ -131,6 +153,7 @@ const Contact = () => {
 
             {/* Close Button */}
             <button
+              id="close-popup-btn"
               onClick={() => setShowPopup(false)}
               style={{
                 padding: "8px 12px",
