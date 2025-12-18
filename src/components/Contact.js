@@ -43,7 +43,30 @@ const Contact = () => {
         }}>
         Help Popup
       </button>
-
+      <br />
+      <div>
+        <h1
+          style={{
+            fontFamily: "Roboto, sans-serif",
+            fontWeight: 600 /* semibold */,
+            fontSize: "28px",
+            lineHeight: "40px",
+          }}>
+          Create Departments
+        </h1>
+        <p
+          style={{
+            fontFamily: "Roboto, sans-serif",
+            fontWeight: 400 /* Regular */,
+            fontSize: "22px",
+            lineHeight: "16px",
+          }}>
+          <span>
+            Creating and managing departments&nbsp;helps you organize your team
+            and streamline daily operations.
+          </span>
+        </p>
+      </div>
       {/* Popup Modal */}
       {showPopup && (
         <div id="popup-wrapper">
