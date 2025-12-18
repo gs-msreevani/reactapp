@@ -47,7 +47,7 @@ const Contact = () => {
       <div>
         <h1
           style={{
-            fontFamily: "Roboto, sans-serif",
+            fontFamily: "Roboto",
             fontWeight: 600 /* semibold */,
             fontSize: "28px",
             lineHeight: "40px",
@@ -56,7 +56,7 @@ const Contact = () => {
         </h1>
         <p
           style={{
-            fontFamily: "Roboto, sans-serif",
+            fontFamily: "Roboto",
             fontWeight: 400 /* Regular */,
             fontSize: "22px",
             lineHeight: "16px",
